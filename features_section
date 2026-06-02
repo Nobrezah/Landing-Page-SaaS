@@ -1,0 +1,76 @@
+const features = [
+  {
+    icon: "⚡",
+    title: "Automações em minutos",
+    description:
+      "Crie fluxos de trabalho poderosos sem escrever uma linha de código. Interface drag-and-drop intuitiva.",
+  },
+  {
+    icon: "🔗",
+    title: "+200 integrações",
+    description:
+      "Conecte Slack, Notion, Google Workspace, GitHub, Jira e muito mais com poucos cliques.",
+  },
+  {
+    icon: "📊",
+    title: "Analytics em tempo real",
+    description:
+      "Acompanhe métricas de produtividade, gargalos de processo e ROI das automações com dashboards claros.",
+  },
+  {
+    icon: "🤖",
+    title: "IA integrada",
+    description:
+      "Sugestões inteligentes de automação baseadas no seu comportamento e padrões da equipe.",
+  },
+  {
+    icon: "🔒",
+    title: "Segurança enterprise",
+    description:
+      "SOC 2 Type II, criptografia end-to-end, SSO e controles de acesso granulares por equipe.",
+  },
+  {
+    icon: "📱",
+    title: "Mobile-first",
+    description:
+      "Aplicativo nativo para iOS e Android com notificações push e modo offline.",
+  },
+];
+
+export function Features() {
+  return (
+    <section id="features" className="py-24 px-4 bg-gray-50">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-16">
+          <p className="text-sm font-semibold text-violet-600 uppercase tracking-wider mb-3">
+            Funcionalidades
+          </p>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            Tudo que você precisa,{" "}
+            <span className="text-violet-600">em um só lugar</span>
+          </h2>
+          <p className="text-gray-500 max-w-xl mx-auto">
+            Plataforma completa para automação e colaboração de times modernos.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {features.map((f) => (
+            <div
+              key={f.title}
+              className="bg-white rounded-2xl p-6 border border-gray-100 hover:shadow-md transition-shadow"
+            >
+              <div className="w-12 h-12 bg-violet-50 rounded-xl flex items-center justify-center text-2xl mb-4">
+                {f.icon}
+              </div>
+              <h3 className="font-semibold text-gray-900 mb-2">{f.title}</h3>
+              <p className="text-sm text-gray-500 leading-relaxed">
+                {f.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
