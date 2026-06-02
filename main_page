@@ -1,0 +1,36 @@
+import { Navbar }      from "@/components/sections/Navbar";
+import { Hero }        from "@/components/sections/Hero";
+import { Features }    from "@/components/sections/Features";
+import { Pricing }     from "@/components/sections/Pricing";
+import { ContactForm } from "@/components/sections/ContactForm";
+
+export default function HomePage() {
+  return (
+    <>
+      <Navbar />
+      <Hero />
+      <Features />
+      <Pricing />
+
+      <section id="contact" className="py-24 px-4 bg-gray-50">
+        <div className="max-w-2xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Fale com a gente
+            </h2>
+            <p className="text-gray-500">
+              Dúvidas sobre planos, integrações ou implementação? Estamos aqui.
+            </p>
+          </div>
+          <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+            <ContactForm />
+          </div>
+        </div>
+      </section>
+
+      <footer className="py-8 px-4 border-t border-gray-100 text-center text-sm text-gray-400">
+        <p>© 2025 FlowSaaS — Feito com Next.js & Tailwind CSS</p>
+      </footer>
+    </>
+  );
+}
